@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+:root {
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    --light-grayish-cyan: hsl(180, 52%, 96%);
+    --light-grayish-cyano: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    min-width: 375px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+header {
+    background-color: var(--desaturated-dark-cyan);
+}
+
+main {
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ponto {
+    height: 3px;
+    width: 3px;
+    background-color: var(--dark-grayish-cyan);
+    border-radius: 50%;
+    display: flex;
+    align-self: center;
+}
+
+.itens-indi{
+    background-color: #fff;
+    display: flex;
+    padding: 1rem;
+    box-shadow: 0px 10px 19px 11px #d3eff1;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 1000px;
+}
+
+#new {
+    background-color: var(--desaturated-dark-cyan);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    width: 50px;
+    padding: .2rem;
+}
+
+#featured {
+    background-color: #000;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    width: 60px;
+    padding: .2rem;
+}
+
+.header{
+    display: flex;
+    gap: .5rem;
+ 
+}
+
+.infos {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.infos a {
+    text-decoration: none;
+    color: #000;
+}
+
+.infosContrato {
+    display: flex;
+    color: var(--dark-grayish-cyan);
+    gap: .5rem;
+}
+
+.filtters input {
+    background-color: var(--light-grayish-cyano);
+    color: var(--desaturated-dark-cyan);
+    border: none;
+    padding: .2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.filtters{
+    display: flex;
+    gap: 400px;
+}
+
+
+.filtters input:hover {
+    background-color: var(--desaturated-dark-cyan);
+    color: white;
+}
+
+.itens-indi{
+    background-color: #fff;
+    display: flex;
+    padding: 1rem;
+    box-shadow: 0px 10px 19px 11px #d3eff1;
+}
