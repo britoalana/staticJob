@@ -170,8 +170,12 @@ window.addEventListener('DOMContentLoaded', () => {
     let displayItem = itens.map((info) => {
         let novo = info.new ? '<button id="new">New!</button>' : ''
         let featured = info.featured ? '<button id="featured">Featured</button>' : ''
-        let languages = info.languages.length ? `<input type="button" value="${info.languages}">` : ''
-        let tools = info.tools.length ? `<input type="button" value="${info.tools}">` : ''
+        let languages = info.languages.map((language) => {
+            return `<input type="button" value="${language}">`
+          }).join('')
+        let tools = info.tools.map((tools) =>{
+return`<input type="button" value="${tools}">` 
+        })  .join('')
         return `<section class="item" ${info.box} >
                 <div class="itens-indi">
     <div id="logo"><img src= ${info.logo} alt=""></div>
@@ -180,15 +184,8 @@ window.addEventListener('DOMContentLoaded', () => {
    <div class="button">${novo}
    ${featured}
    </div></section>
-      <article class="filtters">
-      <a id="position" href="#"> ${info.position}</a>
-      <div class="buttons">
-      <input type="button" value=${info.role}>
-      <input type="button" value= ${info.level}>
-      ${languages}
-       ${tools}
-      </div>
-    </article>
+   <a id="position" href="#"> ${info.position}</a>
+   
      
       <div class="infosContrato">
         <h4> ${info.postedAt}</h4>
@@ -199,7 +196,15 @@ window.addEventListener('DOMContentLoaded', () => {
         
       </div>
     </article>
-
+    <article class="filtters">
+      
+    <div class="buttons">
+    <input type="button" value=${info.role}>
+    <input type="button" value= ${info.level}>
+    ${languages}
+     ${tools}
+    </div>
+  </article>
     
     </div>
   </section>`
